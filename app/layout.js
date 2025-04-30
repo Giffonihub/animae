@@ -1,10 +1,17 @@
-/* in styles/globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;600&display=swap');
+import "./../styles/globals.css"; // questo importa il CSS con i font
+import { Inter } from 'next/font/google';
 
-body {
-  font-family: 'Inter', sans-serif;
-}
+export const metadata = {
+  title: "ANIMAE",
+  description: "Custodi dell’identità emozionale nel Web3",
+};
 
-h1, h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
+export default function RootLayout({ children }) {
+  return (
+    <html lang="it">
+      <body className="bg-white text-gray-900">
+        {children}
+      </body>
+    </html>
+  );
 }
